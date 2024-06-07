@@ -1,64 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyoji's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ポートフォリオ - Kyolab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h1, h2, h3 {
+            color: #343a40;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: calc(33.333% - 40px);
+        }
+
+        .project h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #495057;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">Kyoji's Portfolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">ポートフォリオ - Kyolab</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">ホーム</a></li>
+                    <li><a href="#about">自己紹介</a></li>
+                    <li><a href="#projects">プロジェクト</a></li>
+                    <li><a href="#contact">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="section">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Kyoji, an engineer.</p>
-    </section>
-
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am 25 years old, working as an engineer in Tokyo.<br>
-        I am from Oita Prefecture.</p>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>[Description of project 1]</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>[Description of project 2]</p>
-            </div>
-            <!-- Add more projects as needed -->
+    <section id="home">
+        <div class="container">
+            <h1>ようこそ、私のポートフォリオへ</h1>
+            <p>私はエンジニアです。ここには私のプロジェクトやスキルに関する情報があります。</p>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/moqgozab" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="about">
+        <div class="container">
+            <h2>自己紹介</h2>
+            <p>私は技術に情熱を持つエンジニアです。これまでの経験やスキルを活かして、さまざまなプロジェクトに挑戦しています。</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>プロジェクト</h2>
+            <div class="project-list">
+                <div class="project">
+                    <h3>プロジェクト1</h3>
+                    <p>プロジェクト1の説明</p>
+                </div>
+                <div class="project">
+                    <h3>プロジェクト2</h3>
+                    <p>プロジェクト2の説明</p>
+                </div>
+                <div class="project">
+                    <h3>プロジェクト3</h3>
+                    <p>プロジェクト3の説明</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <form action="https://formspree.io/f/moqgozab" method="POST">
+                <input type="text" name="name" placeholder="お名前" required>
+                <input type="email" name="email" placeholder="メールアドレス" required>
+                <textarea name="message" placeholder="メッセージ" required></textarea>
+                <button type="submit">送信</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Kyoji. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Kyolab. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
